@@ -1,0 +1,60 @@
+{
+  "data": {
+    "url": "https://raw.githubusercontent.com/TheAnimalOne/FIT3179/main/ausenvironmentaldisasterdata.csv"
+  },
+  "params": [
+    {
+      "name": "title_selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          "Bushfire",
+          "Cyclone",
+          "Drought/Heatwave",
+          "Flood",
+          "Severe Storm"
+        ],
+        "labels": [
+          "Bushfire",
+          "Cyclone",
+          "Drought/Heatwave",
+          "Flood",
+          "Severe Storm"
+        ],
+        "name": "Disaster Selection: "
+      }
+    }
+  ],
+  "transform": [
+    {"filter": "datum.title == title_selection"},
+    {"filter": "datum.Disasterlength <= 150"}
+  ],
+  "layer": [
+    {
+      "mark": {"type": "boxplot", "median": {"color": "red"}, "ticks": true},
+      "encoding": {
+        "x": {"field": "title", "type": "nominal"},
+        "y": {
+          "field": "Disasterlength",
+          "type": "quantitative",
+          "title": "Disaster Length (in days)",
+          "scale": {"type": "linear"}
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "dx": 50,
+        "fontSize": 11.5,
+        "fontStyle": "italic"
+      },
+      "encoding": {
+        "text": {"aggregate": "median","field": "Disasterlength", "type": "quantitative"},
+        "color": {"value": "black"}
+      }
+    }
+  ]
+}
