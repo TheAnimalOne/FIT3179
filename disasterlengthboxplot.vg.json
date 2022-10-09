@@ -11,6 +11,7 @@
       "bind": {
         "input": "select",
         "options": [
+          "null",
           "Bushfire",
           "Cyclone",
           "Drought/Heatwave",
@@ -18,6 +19,7 @@
           "Severe Storm"
         ],
         "labels": [
+          "All",
           "Bushfire",
           "Cyclone",
           "Drought/Heatwave",
