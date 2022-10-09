@@ -31,7 +31,7 @@
     }
   ],
   "transform": [
-    {"filter": "datum.title == title_selection"}
+    {"filter": "datum.title == title_selection || title_selection == null"}
   ],
   "layer": [
     {
