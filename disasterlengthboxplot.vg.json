@@ -1,4 +1,6 @@
-{
+{ 
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "height": 350,
   "data": {
     "url": "https://raw.githubusercontent.com/TheAnimalOne/FIT3179/main/ausenvironmentaldisasterdata.csv"
   },
@@ -26,14 +28,13 @@
     }
   ],
   "transform": [
-    {"filter": "datum.title == title_selection"},
-    {"filter": "datum.Disasterlength <= 150"}
+    {"filter": "datum.title == title_selection"}
   ],
   "layer": [
     {
       "mark": {"type": "boxplot", "median": {"color": "red"}, "ticks": true},
       "encoding": {
-        "x": {"field": "title", "type": "nominal"},
+        "x": {"field": "title", "type": "nominal", "title":""},
         "y": {
           "field": "Disasterlength",
           "type": "quantitative",
@@ -47,7 +48,7 @@
         "type": "text",
         "align": "right",
         "baseline": "middle",
-        "dx": 50,
+        "dx": 100,
         "fontSize": 11.5,
         "fontStyle": "italic"
       },
@@ -55,6 +56,25 @@
         "text": {"aggregate": "median","field": "Disasterlength", "type": "quantitative"},
         "color": {"value": "black"}
       }
+    },
+    {
+      "transform": [
+
+        {
+          "calculate": "'The median value is'",
+          "as": "text_raw"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "dx": 150,
+        "dy": -15,
+        "fontSize": 11.5,
+        "fontStyle": "italic"
+      },
+      "encoding": {"text": {"field": "text_raw"}}
     }
   ]
 }
