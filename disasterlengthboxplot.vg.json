@@ -11,7 +11,7 @@
       "bind": {
         "input": "select",
         "options": [
-          "null",
+            null,
           "Bushfire",
           "Cyclone",
           "Drought/Heatwave",
@@ -31,13 +31,12 @@
     }
   ],
   "transform": [
-    {"filter": "datum.title == title_selection || title_selection == null"}
+    {"filter": "title_selection == null || datum.title == title_selection"}
   ],
   "layer": [
     {
       "mark": {"type": "boxplot", "median": {"color": "red"}, "ticks": true},
       "encoding": {
-        "x": {"field": "title", "type": "nominal", "title":""},
         "y": {
           "field": "Disasterlength",
           "type": "quantitative",
@@ -81,3 +80,4 @@
     }
   ]
 }
+
