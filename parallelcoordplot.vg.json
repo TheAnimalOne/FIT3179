@@ -1,0 +1,19 @@
+{
+  "data": {
+    "url": "https://raw.githubusercontent.com/TheAnimalOne/FIT3179/main/ausenvironmentaldisasterdata.csv"
+  },
+  "transform": [
+    {"window": [{"op": "count", "as": "index"}]},
+    {"fold": ["Evacuated", "Injuries", "Deaths", "Disasterlength", "Vehiclesdamagedordestroyed"]}
+  ],
+  "mark": "line",
+  "encoding": {
+    "color": {"type": "nominal", "field": "title"},
+    "detail": {"type": "nominal", "field": "index"},
+    "opacity": {"value": 0.3},
+    "x": {"type": "nominal", "field": "key"},
+    "y": {"type": "quantitative", "field": "value"}
+  },
+  "width": 600,
+  "height": 300
+}
