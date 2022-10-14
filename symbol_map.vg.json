@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 1500,
+  "width": 1000,
   "height": 500,
   "title": "Natural Disasters Australia",
   "projection": {"type": "mercator"},
