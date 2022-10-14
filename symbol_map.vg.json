@@ -16,17 +16,45 @@
       "data": {
         "url": "https://raw.githubusercontent.com/TheAnimalOne/FIT3179/main/ausenvironmentaldisasterdata.csv"
       },
-      "transform":[{"calculate": "datum.Disasterlength + 0.1","as":"Length"}],
+      "transform": [
+        {"calculate": "datum.Disasterlength + 0.1", "as": "Length"}
+      ],
+      "selection": {
+        "disaster_highlight": {
+          "type": "multi",
+          "fields": ["title"],
+          "bind": "legend"
+        }
+      },
       "mark": {"type": "circle", "tooltip": {"content": "data"}},
       "encoding": {
         "longitude": {"field": "lon", "type": "quantitative"},
         "latitude": {"field": "lat", "type": "quantitative"},
-        "size": {"field": "Deaths", "type":"quantitative","scale": {"rangeMax": 1500}},
-        "color": {"field": "title", "type": "nominal","title": "Disaster Type"},
-      "tooltip": [{"field": "title", "type": "nominal"},
-      {"field": "Disasterlength", "type": "quantitative", "title": "Disaster Length in days"},
-      {"field": "Deaths", "type": "quantitative"},
-      {"field": "Injuries", "type": "quantitative"}]
-    }}
+        "size": {
+          "field": "Deaths",
+          "type": "quantitative",
+          "scale": {"rangeMax": 1500}
+        },
+        "color": {
+          "field": "title",
+          "type": "nominal",
+          "title": "Disaster Type"
+        },
+        "opacity": {
+          "condition": {"selection": "disaster_highlight", "value": 0.6},
+          "value": 0.2
+        },
+        "tooltip": [
+          {"field": "title", "type": "nominal"},
+          {
+            "field": "Disasterlength",
+            "type": "quantitative",
+            "title": "Disaster Length in days"
+          },
+          {"field": "Deaths", "type": "quantitative"},
+          {"field": "Injuries", "type": "quantitative"}
+        ]
+      }
+    }
   ]
 }
