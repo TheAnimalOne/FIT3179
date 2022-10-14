@@ -24,7 +24,7 @@
       "tooltip": [{"field": "title", "type": "nominal"},
       {"field": "regions", "type": "nominal"},
       {"field": "Deaths", "type": "quantitative"},
-      {"field": "Insured Cost", "type": "quantitative"}]
+      {"field": "Injuries", "type": "quantitative"}]
     }}
   ]
 }
