@@ -13,18 +13,16 @@
         "options": [
             null,
           "Bushfire",
-          "Cyclone",
+          "Cyclone/Tornado",
           "Drought/Heatwave",
-          "Flood",
-          "Severe Storm"
+          "Storm/Flood"
         ],
         "labels": [
           "All",
           "Bushfire",
-          "Cyclone",
+          "Cyclone/Tornado",
           "Drought/Heatwave",
-          "Flood",
-          "Severe Storm"
+          "Storm/Flood"
         ],
         "name": "Disaster Selection: "
       }
