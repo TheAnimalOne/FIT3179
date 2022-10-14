@@ -2,6 +2,10 @@ body *{
     font-family: 'Open Sans', sans-serif;
 }
 
+.c-align: {
+text-align: center:
+}
+
 h1 {
     font-weight: 900;
 }
