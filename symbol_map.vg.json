@@ -41,7 +41,7 @@
           "title": "Disaster Type"
         },
         "opacity": {
-          "condition": {"selection": "disaster_highlight", "value": 0.6},
+          "condition": {"selection": "disaster_highlight", "value": 0.8},
           "value": 0.2
         },
         "tooltip": [
