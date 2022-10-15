@@ -1,0 +1,14 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "height":"container",
+  "width":"container",
+  "data": {
+    "url": "https://raw.githubusercontent.com/TheAnimalOne/FIT3179/main/ausenvironmentaldisasterdata.csv"
+  },
+  "mark": "bar",
+  "encoding": {
+    "x": {"field": "title", "type": "nominal", "title": "Disaster Type"},
+    "y": {"aggregate":"sum","field": "InsuredCost", "type": "quantitative", "title": "Total Cost (in AUD)"},
+    "color": {"field":"title", "legend": null}
+  }
+}
