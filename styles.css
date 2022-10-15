@@ -18,7 +18,8 @@ body {
     width: 850px;
     background-color: white;
     margin: auto;
-    padding: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
     padding-top: 35px;
 }
 
