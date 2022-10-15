@@ -24,6 +24,7 @@ body {
 
 .vis-container {
     width: 100%;
+    text-align: center;
 }
 
 .description h2,
