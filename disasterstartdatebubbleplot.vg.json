@@ -3,7 +3,7 @@
   "data": {
     "url": "https://raw.githubusercontent.com/TheAnimalOne/FIT3179/main/ausenvironmentaldisasterdata.csv"
   },
-  "width": 800,
+  "width": 750,
   "height": 500,
   "mark": {
     "type": "circle",
