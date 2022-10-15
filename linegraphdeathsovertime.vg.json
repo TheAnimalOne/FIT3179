@@ -1,0 +1,14 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {"url": "https://raw.githubusercontent.com/TheAnimalOne/FIT3179/main/ausenvironmentaldisasterdata.csv"},
+  "mark": {
+    "type": "line",
+    "point": true,
+    "tooltip": true
+  },
+  "encoding": {
+    "x": {"timeUnit": "year", "field": "startDate","title":"Year"},
+    "y": {"aggregate":"mean", "field": "Deaths", "type": "quantitative", "title":"Average Number of Deaths per Year"},
+    "color": {"field": "title", "type": "nominal", "title": "Disaster Type"}
+  }
+}
