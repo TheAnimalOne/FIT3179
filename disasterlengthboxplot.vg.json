@@ -1,7 +1,7 @@
 { 
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Disaster Length",
-  "height": 350,
+  "height": 300,
   "data": {
     "url": "https://raw.githubusercontent.com/TheAnimalOne/FIT3179/main/ausenvironmentaldisasterdata.csv"
   },
