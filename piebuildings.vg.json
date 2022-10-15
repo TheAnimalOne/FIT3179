@@ -1,0 +1,18 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Pie Chart with percentage_tooltip",
+  "data": {
+    "url": "https://raw.githubusercontent.com/TheAnimalOne/FIT3179/main/ausenvironmentaldisasterdata.csv"
+  },
+  "mark": {"type": "arc", "tooltip": true},
+  "encoding": {
+    "theta": {
+      "aggregate": "sum",
+      "field": "buildingdestroyedordamaged",
+      "type": "quantitative",
+      "format": ",",
+      "title": "Buildings damaged or destroyed"
+    },
+    "color": {"field": "title", "type": "nominal", "title": "Disaster Type"}
+  }
+}
