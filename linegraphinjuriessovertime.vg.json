@@ -10,8 +10,7 @@
   },
   "encoding": {
     "x": {"timeUnit": "year", "field": "startDate","title":"Year"},
-    "y": {"aggregate":"mean", "field": "Deaths", "type": "quantitative", "title":"Average Number of Deaths per Year"},
+    "y": {"aggregate":"mean", "field": "Injuries", "type": "quantitative", "title": "Average Injuries"},
     "color": {"field": "title", "type": "nominal", "title": "Disaster Type"}
   }
 }
-
