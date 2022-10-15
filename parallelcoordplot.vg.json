@@ -7,7 +7,7 @@
   "height": 300,
   "transform": [
     {"window": [{"op": "count", "as": "index"}]},
-    {"fold": ["Injuries", "Deaths", "Buildings damaged or destroyed","Vehicles damaged or destroyed","Disaster Length"]},
+    {"fold": ["Injuries", "Buildings damaged or destroyed","Vehicles damaged or destroyed","Insured Cost"]},
     {
       "joinaggregate": [
         {"op": "min", "field": "value", "as": "min"},
@@ -41,10 +41,8 @@
       "tooltip": [{
         "type": "quantitative",
         "field": "Injuries"
-      }, {
-        "type": "quantitative",
-        "field": "Deaths"
-      }, {
+      },
+      {
         "type": "quantitative",
         "field": "Buildings damaged or destroyed"
       }, {
@@ -53,7 +51,7 @@
       },
       {
         "type": "quantitative",
-        "field": "Disaster Length"
+        "field": "Insured Cost"
       }]
     }
   }, {
