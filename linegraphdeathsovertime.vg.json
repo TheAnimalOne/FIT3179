@@ -1,6 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {"url": "https://raw.githubusercontent.com/TheAnimalOne/FIT3179/main/ausenvironmentaldisasterdata.csv"},
+  "height":"container",
+  "width":"container",
   "mark": {
     "type": "line",
     "point": true,
@@ -12,3 +14,4 @@
     "color": {"field": "title", "type": "nominal", "title": "Disaster Type"}
   }
 }
+
