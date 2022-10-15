@@ -1,0 +1,35 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 750,
+  "height": "container",
+  "data": {
+    "url": "https://raw.githubusercontent.com/TheAnimalOne/FIT3179/main/ausenvironmentaldisasterdata.csv"
+  },
+  "mark": "circle",
+  "selection": {
+    "disaster_highlight": {
+      "type": "multi",
+      "fields": ["title"],
+      "bind": "legend"
+    }},
+    "encoding": {
+      "y": {
+        "field": "startDate",
+        "type": "ordinal",
+        "timeUnit": "month",
+        "title": ""
+      },
+      "x": {
+        "field": "startDate",
+        "type": "ordinal",
+        "timeUnit": "year",
+        "title": ""
+      },
+      "size": {"field": "count", "type": "quantitative", "aggregate": "sum"},
+      "color": {"field": "title", "title": "Disaster Type"},
+      "opacity": {
+        "condition": {"selection": "disaster_highlight", "value": 0.8},
+        "value": 0.2
+      }
+    }
+  }
