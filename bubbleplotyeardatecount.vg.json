@@ -26,7 +26,7 @@
         "title": ""
       },
       "size": {"field": "count", "type": "quantitative", "aggregate": "sum"},
-      "color": {"field": "title", "title": "Disaster Type", "legend": {"orient": "left"}},
+      "color": {"field": "title", "title": "Disaster Type"},
       "opacity": {
         "condition": {"selection": "disaster_highlight", "value": 0.8},
         "value": 0.2
