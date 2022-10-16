@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {"url": "https://raw.githubusercontent.com/TheAnimalOne/FIT3179/main/ausenvironmentaldisasterdata.csv"},
-  "height":250,
-  "width":250,
+  "height":200,
+  "width":200,
   "mark": {
     "type": "line",
     "point": true,
