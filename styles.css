@@ -84,3 +84,11 @@ h1 {
 .small-font {
     font-size: 14px;
 }
+.box {
+    border: 5px solid black;
+}
+.underline{
+    border: 2px solid red;
+    border-style: hidden hidden solid hidden;
+    text-align: center;
+}
