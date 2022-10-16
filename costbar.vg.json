@@ -8,7 +8,7 @@
   "mark": {"type": "bar", "tooltip": true},
   "encoding": {
     "x": {"field": "title", "type": "nominal", "title": "Disaster Type"},
-    "y": {"aggregate":"sum","field": "InsuredCost", "type": "quantitative", "title": "Total Cost (in AUD)"},
+    "y": {"aggregate":"sum","field": "InsuredCost", "type": "quantitative", "title": "Total Cost (in AUD)", "format": "$,"},
     "color": {"field":"title", "legend": null}
   }
 }
