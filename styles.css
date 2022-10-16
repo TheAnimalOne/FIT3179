@@ -2,7 +2,7 @@ body *{
     font-family: 'Open Sans', sans-serif;
 }
 
-.c-align: {
+.c-align {
     text-align: center;
 }
 
@@ -15,17 +15,40 @@ body {
 }
 
 .page {
-    width: 850px;
+    width: 1250px;
     background-color: white;
     margin: auto;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
     padding-top: 35px;
 }
 
 .vis-container {
     width: 100%;
-    padding-left:160px;
+}
+.box-vis-container {
+    width: 100%;
+    padding-left:50px;
+}
+
+.map-vis-container {
+    width: 100%;
+    padding-left:100px;
+}
+
+.pcplot-vis-container {
+    width: 100%;
+    padding-left:50px;
+}
+
+.bplot-vis-container {
+    width: 100%;
+    padding-left:60px;
+}
+
+.b1plot-vis-container {
+    width: 100%;
+    padding-right:200px;
 }
 
 .description h2,
