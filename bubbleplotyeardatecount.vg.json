@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 750,
+  "width": 700,
   "height": 350,
   "data": {
     "url": "https://raw.githubusercontent.com/TheAnimalOne/FIT3179/main/ausenvironmentaldisasterdata.csv"
@@ -26,7 +26,7 @@
         "title": ""
       },
       "size": {"field": "count", "type": "quantitative", "aggregate": "sum"},
-      "color": {"field": "title", "title": "Disaster Type"},
+      "color": {"field": "title", "title": "Disaster Type", "legend": {"orient": "left"}},
       "opacity": {
         "condition": {"selection": "disaster_highlight", "value": 0.8},
         "value": 0.2
