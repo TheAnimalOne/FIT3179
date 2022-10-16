@@ -1,6 +1,5 @@
 { 
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Disaster Length",
   "height": 300,
   "width": 150,
   "data": {
