@@ -1,16 +1,31 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "data": {"url": "https://raw.githubusercontent.com/TheAnimalOne/FIT3179/main/ausenvironmentaldisasterdata.csv"},
-  "height":250,
-  "width":250,
-  "mark": {
-    "type": "line",
-    "point": true,
-    "tooltip": true
+  "data": {
+    "url": "https://raw.githubusercontent.com/TheAnimalOne/FIT3179/main/ausenvironmentaldisasterdata.csv"
+  },
+  "height": 250,
+  "width": 250,
+  "mark": {"type": "line", "point": true, "tooltip": true},
+  "selection": {
+    "disaster_highlight": {
+      "type": "multi",
+      "fields": ["title"],
+      "bind": "legend"
+    }
   },
   "encoding": {
-    "x": {"timeUnit": "year", "field": "startDate","title":"Year"},
-    "y": {"aggregate":"mean", "field": "Injuries", "type": "quantitative", "title": "Average Injuries", "format": ","},
-    "color": {"field": "title", "type": "nominal", "title": "Disaster Type"}
+    "x": {"timeUnit": "year", "field": "startDate", "title": "Year"},
+    "y": {
+      "aggregate": "mean",
+      "field": "Injuries",
+      "type": "quantitative",
+      "title": "Average Injuries",
+      "format": ","
+    },
+    "color": {"field": "title", "type": "nominal", "title": "Disaster Type"},
+    "opacity": {
+    "condition": {"selection": "disaster_highlight", "value": 0.8},
+    "value": 0.2
+  }
   }
 }
