@@ -5,7 +5,7 @@
   "data": {
     "url": "https://raw.githubusercontent.com/TheAnimalOne/FIT3179/main/ausenvironmentaldisasterdata.csv"
   },
-  "mark": "bar",
+  "mark": {"type": "bar", "tooltip": true},
   "encoding": {
     "x": {"field": "title", "type": "nominal", "title": "Disaster Type"},
     "y": {"aggregate":"sum","field": "InsuredCost", "type": "quantitative", "title": "Total Cost (in AUD)"},
